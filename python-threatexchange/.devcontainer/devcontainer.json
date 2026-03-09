@@ -29,6 +29,7 @@
   "remoteUser": "vscode",
   "postCreateCommand": "pip install --editable .[dev]",
   "mounts": [
-    "source=python-threatexchange-cmdhistory,target=/commandhistory,type=volume"
+    "source=python-threatexchange-cmdhistory,target=/commandhistory,type=volume",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE},target=/host-home-folder,type=bind,consistency=cached"
   ]
 }
